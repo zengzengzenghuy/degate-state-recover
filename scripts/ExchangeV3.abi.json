@@ -1,0 +1,108 @@
+[
+    {
+        "inputs": [],
+        "name": "getNumAvailableForcedSlots",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint32",
+                                "name": "accountID",
+                                "type": "uint32"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "pubKeyX",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "pubKeyY",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint32",
+                                "name": "nonce",
+                                "type": "uint32"
+                            }
+                        ],
+                        "internalType": "struct ExchangeData.AccountLeaf",
+                        "name": "accountLeaf",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint32",
+                                "name": "tokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "internalType": "uint248",
+                                "name": "balance",
+                                "type": "uint248"
+                            }
+                        ],
+                        "internalType": "struct ExchangeData.BalanceLeaf",
+                        "name": "balanceLeaf",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "uint256[48]",
+                        "name": "accountMerkleProof",
+                        "type": "uint256[48]"
+                    },
+                    {
+                        "internalType": "uint256[48]",
+                        "name": "balanceMerkleProof",
+                        "type": "uint256[48]"
+                    }
+                ],
+                "internalType": "struct ExchangeData.MerkleProof",
+                "name": "merkleProof",
+                "type": "tuple"
+            }
+        ],
+        "name": "withdrawFromMerkleTree",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint32",
+                "name": "accountID",
+                "type": "uint32"
+            },
+            {
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            }
+        ],
+        "name": "notifyForcedRequestTooOld",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
